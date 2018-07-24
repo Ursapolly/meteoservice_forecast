@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 require 'uri'
 require 'net/http'
 require 'rexml/document'
@@ -17,7 +15,7 @@ CITIES = {
 city_names = CITIES.keys
 
 puts 'Выберите город:'
-city_names.each_with_index { |city, index| puts "#{index + 1}: #{city}" }
+city_names.each_with_index {|city, index| puts "#{index + 1}: #{city}"}
 
 user_choice = STDIN.gets.to_i
 unless user_choice.between?(1, city_names.size)
